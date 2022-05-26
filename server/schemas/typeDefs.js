@@ -26,6 +26,11 @@ const typeDefs = gql`
     username: String
   }
 
+  type Auth {
+    token: ID!
+    user: User
+  }
+  
   type Query {
     me: User
     users: [User]
@@ -42,11 +47,6 @@ const typeDefs = gql`
     addFriend(friendId: ID!): User
   }
 
-  type Auth {
-    token: ID!
-    user: User
-  }
-  
 `;
 
 module.exports = typeDefs;
